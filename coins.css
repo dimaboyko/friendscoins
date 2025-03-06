@@ -1,0 +1,1470 @@
+/* Netherlands Coins */
+.coin {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #cd7f32;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: transform 0.3s;
+    overflow: visible;
+}
+
+.coin::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.coin::after {
+    content: attr(data-title);
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 99999;
+    width: 200px;
+    text-align: left;
+    font-size: 12px;
+    line-height: 1.4;
+    pointer-events: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-left: 30px;
+}
+
+.coin:hover::after {
+    display: block;
+}
+
+.coin.collected {
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5),
+                0 0 10px #4CAF50,
+                0 0 15px rgba(76, 175, 80, 0.5);
+    border: 2px solid #4CAF50;
+}
+
+/* 1 cent */
+.nl-1c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/nl/Netherlands_1cent_2014.jpg');
+}
+.nl-1c:hover::after {
+    content: "1 cent coin featuring King Willem-Alexander";
+}
+.nl-1c[data-description]::after {
+    content: "1 cent coin featuring King Willem-Alexander";
+}
+
+/* 2 cents */
+.nl-2c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/nl/Netherlands_2cent_2014.jpg');
+}
+.nl-2c:hover::after {
+    content: "2 cent coin with King Willem-Alexander";
+}
+.nl-2c[data-description]::after {
+    content: "2 cent coin with King Willem-Alexander";
+}
+
+/* 5 cents */
+.nl-5c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/nl/Netherlands_5cent_2014.jpg');
+}
+.nl-5c:hover::after {
+    content: "5 cent coin featuring King Willem-Alexander";
+}
+.nl-5c[data-description]::after {
+    content: "5 cent coin featuring King Willem-Alexander";
+}
+
+/* 10 cents */
+.nl-10c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/nl/Netherlands_10cent.jpg');
+}
+.nl-10c:hover::after {
+    content: "10 cent coin featuring King Willem-Alexander";
+}
+.nl-10c[data-description]::after {
+    content: "10 cent coin featuring King Willem-Alexander";
+}
+
+/* 20 cents */
+.nl-20c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/nl/Netherlands_20cent.jpg');
+}
+.nl-20c:hover::after {
+    content: "20 cent coin featuring King Willem-Alexander";
+}
+.nl-20c[data-description]::after {
+    content: "20 cent coin featuring King Willem-Alexander";
+}
+
+/* 50 cents */
+.nl-50c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/nl/Netherlands_50cent.jpg');
+}
+.nl-50c:hover::after {
+    content: "50 cent coin featuring King Willem-Alexander";
+}
+.nl-50c[data-description]::after {
+    content: "50 cent coin featuring King Willem-Alexander";
+}
+
+/* 1 euro */
+.nl-1e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/nl/Netherlands_1Euro.jpg');
+}
+.nl-1e:hover::after {
+    content: "1 euro coin featuring King Willem-Alexander";
+}
+
+/* 2 euros */
+.nl-2e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/nl/Netherlands_2Euro.jpg');
+}
+.nl-2e:hover::after {
+    content: "2 euro coin featuring King Willem-Alexander";
+}
+.nl-2e[data-description]::after {
+    content: "2 euro coin featuring King Willem-Alexander";
+}
+
+/* Finland Coins */
+/* 1 cent */
+.fi-1c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/fi/Finland_1cent.jpg');
+}
+.fi-1c:hover::after {
+    content: "1 cent coin featuring the Finnish heraldic lion";
+}
+
+/* 2 cents */
+.fi-2c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/fi/Finland_2cent.jpg');
+}
+.fi-2c:hover::after {
+    content: "2 cent coin with the Finnish heraldic lion";
+}
+
+/* 5 cents */
+.fi-5c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/fi/Finland_5cent.jpg');
+}
+.fi-5c:hover::after {
+    content: "5 cent coin featuring the Finnish heraldic lion";
+}
+
+/* 10 cents */
+.fi-10c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/fi/Finland_10cent.jpg');
+}
+.fi-10c:hover::after {
+    content: "10 cent coin featuring the Finnish heraldic lion";
+}
+
+/* 20 cents */
+.fi-20c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/fi/Finland_20cent.jpg');
+}
+.fi-20c:hover::after {
+    content: "20 cent coin featuring the Finnish heraldic lion";
+}
+
+/* 50 cents */
+.fi-50c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/fi/Finland_50cent.jpg');
+}
+.fi-50c:hover::after {
+    content: "50 cent coin featuring the Finnish heraldic lion";
+}
+
+/* 1 euro */
+.fi-1e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/fi/Finland_1euro.jpg');
+}
+.fi-1e:hover::after {
+    content: "1 euro coin featuring two flying swans";
+}
+
+/* 2 euros */
+.fi-2e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/fi/Finland_2euro.jpg');
+}
+.fi-2e:hover::after {
+    content: "2 euro coin featuring cloudberry and cloudberry flower";
+}
+
+/* Spain Coins */
+.es-1c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/es/Spain_1cent.jpg');
+}
+.es-1c:hover::after {
+    content: "1 cent coin featuring the Spanish coat of arms";
+}
+
+.es-2c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/es/Spain_2cent.jpg');
+}
+.es-2c:hover::after {
+    content: "2 cent coin with the Spanish coat of arms";
+}
+
+.es-5c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/es/Spain_5cent.jpg');
+}
+.es-5c:hover::after {
+    content: "5 cent coin featuring the Spanish coat of arms";
+}
+
+.es-10c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/es/Spain_10cent.jpg');
+}
+.es-10c:hover::after {
+    content: "10 cent coin featuring King Felipe VI of Spain";
+}
+
+.es-20c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/es/Spain_20cent.jpg');
+}
+.es-20c:hover::after {
+    content: "20 cent coin featuring King Felipe VI of Spain";
+}
+
+.es-50c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/es/Spain_50cent_2014.jpg');
+}
+.es-50c:hover::after {
+    content: "50 cent coin featuring King Felipe VI of Spain";
+}
+
+.es-1e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/es/Spain_1Euro_2015.jpg');
+}
+.es-1e:hover::after {
+    content: "1 euro coin featuring King Felipe VI of Spain";
+}
+
+.es-2e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/es/Spain_2euro_2015.jpg');
+}
+.es-2e:hover::after {
+    content: "2 euro coin featuring King Felipe VI of Spain";
+}
+
+/* Greece Coins */
+.gr-1c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/gr/Greece_1cent.jpg');
+}
+.gr-1c:hover::after {
+    content: "1 cent coin featuring the Greek trireme";
+}
+
+.gr-2c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/gr/Greece_2cent.jpg');
+}
+.gr-2c:hover::after {
+    content: "2 cent coin with the Greek corvette";
+}
+
+.gr-5c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/gr/Greece_5cent.jpg');
+}
+.gr-5c:hover::after {
+    content: "5 cent coin featuring the Greek tanker";
+}
+
+.gr-10c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/gr/Greece_10cent.jpg');
+}
+.gr-10c:hover::after {
+    content: "10 cent coin featuring Eleftherios Venizelos";
+}
+
+.gr-20c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/gr/Greece_20cent.jpg');
+}
+.gr-20c:hover::after {
+    content: "20 cent coin featuring Eleftherios Venizelos";
+}
+
+.gr-50c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/gr/Greece_50cent.jpg');
+}
+.gr-50c:hover::after {
+    content: "50 cent coin featuring Eleftherios Venizelos";
+}
+
+.gr-1e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/gr/Greece_1euro.jpg');
+}
+.gr-1e:hover::after {
+    content: "1 euro coin featuring the owl from ancient Athens";
+}
+
+.gr-2e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/gr/Greece_2euro.jpg');
+}
+.gr-2e:hover::after {
+    content: "2 euro coin featuring the Greek mythological scene";
+}
+
+/* France Coins */
+.fr-1c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/fr/France_1cent.jpg');
+}
+.fr-1c:hover::after {
+    content: "1 cent coin featuring Marianne, symbol of French Republic";
+}
+
+.fr-2c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/fr/France_2cent.jpg');
+}
+.fr-2c:hover::after {
+    content: "2 cent coin with Marianne, symbol of French Republic";
+}
+
+.fr-5c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/fr/France_5cent.jpg');
+}
+.fr-5c:hover::after {
+    content: "5 cent coin featuring Marianne, symbol of French Republic";
+}
+
+.fr-10c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/fr/France_10cent_2024.jpg');
+}
+.fr-10c:hover::after {
+    content: "10 cent coin featuring the tree of life, symbolizing growth and continuity";
+}
+
+.fr-20c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/fr/France_20cent_2024.jpg');
+}
+.fr-20c:hover::after {
+    content: "20 cent coin featuring the tree of life, symbolizing growth and continuity";
+}
+
+.fr-50c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/fr/France_50cent_2024.jpg');
+}
+.fr-50c:hover::after {
+    content: "50 cent coin featuring the tree of life, symbolizing growth and continuity";
+}
+
+.fr-1e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/fr/France_1euro_2022.jpg');
+}
+.fr-1e:hover::after {
+    content: "1 euro coin featuring the tree of life, symbolizing growth and continuity";
+}
+
+.fr-2e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/fr/France_2euro_2022.jpg');
+}
+.fr-2e:hover::after {
+    content: "2 euro coin featuring Marianne, symbol of French Republic";
+}
+
+/* Croatia Coins */
+.hr-1c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/hr/Croatia_1cent.jpg');
+}
+.hr-1c:hover::after {
+    content: "1 cent coin featuring the Croatian checkerboard pattern";
+}
+
+.hr-2c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/hr/Croatia_2cent.jpg');
+}
+.hr-2c:hover::after {
+    content: "2 cent coin with the Croatian checkerboard pattern";
+}
+
+.hr-5c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/hr/Croatia_5cent.jpg');
+}
+.hr-5c:hover::after {
+    content: "5 cent coin featuring the Croatian checkerboard pattern";
+}
+
+.hr-10c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/hr/Croatia_10cent.jpg');
+}
+.hr-10c:hover::after {
+    content: "10 cent coin featuring the Croatian marten (kuna)";
+}
+
+.hr-20c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/hr/Croatia_20cent.jpg');
+}
+.hr-20c:hover::after {
+    content: "20 cent coin featuring the Croatian marten (kuna)";
+}
+
+.hr-50c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/hr/Croatia_50cent.jpg');
+}
+.hr-50c:hover::after {
+    content: "50 cent coin featuring the Croatian marten (kuna)";
+}
+
+.hr-1e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/hr/Croatia_1euro.jpg');
+}
+.hr-1e:hover::after {
+    content: "1 euro coin featuring the Croatian marten (kuna)";
+}
+
+.hr-2e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/hr/Croatia_2euro.jpg');
+}
+.hr-2e:hover::after {
+    content: "2 euro coin featuring the Croatian map";
+}
+
+/* Italy Coins */
+.it-1c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/it/Italy_1cent.jpg');
+}
+.it-1c:hover::after {
+    content: "1 cent coin featuring the Colosseum of Rome";
+}
+
+.it-2c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/it/Italy_2cent.jpg');
+}
+.it-2c:hover::after {
+    content: "2 cent coin with the Colosseum of Rome";
+}
+
+.it-5c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/it/Italy_5cent.jpg');
+}
+.it-5c:hover::after {
+    content: "5 cent coin featuring the Colosseum of Rome";
+}
+
+.it-10c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/it/Italy_10cent.jpg');
+}
+.it-10c:hover::after {
+    content: "10 cent coin featuring the Colosseum in Rome";
+}
+
+.it-20c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/it/Italy_20cent.jpg');
+}
+.it-20c:hover::after {
+    content: "20 cent coin featuring the Colosseum in Rome";
+}
+
+.it-50c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/it/Italy_50cent.jpg');
+}
+.it-50c:hover::after {
+    content: "50 cent coin featuring the Colosseum in Rome";
+}
+
+.it-1e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/it/Italy_1euro.jpg');
+}
+.it-1e:hover::after {
+    content: "1 euro coin featuring Leonardo da Vinci's Vitruvian Man";
+}
+
+.it-2e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/it/Italy_2euro.jpg');
+}
+.it-2e:hover::after {
+    content: "2 euro coin featuring Dante Alighieri";
+}
+
+/* Add collected state for specific coins */
+.es-20c.collected,
+.gr-10c.collected,
+.gr-2e.collected {
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5),
+                0 0 10px #4CAF50,
+                0 0 15px rgba(76, 175, 80, 0.5);
+    border: 2px solid #4CAF50;
+}
+
+/* Cyprus Coins */
+.cy-1c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/cy/Cyprus_1cent.jpg');
+}
+.cy-1c:hover::after {
+    content: "1 cent coin featuring the mouflon, Cyprus's national animal";
+}
+
+.cy-2c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/cy/Cyprus_2cent.jpg');
+}
+.cy-2c:hover::after {
+    content: "2 cent coin with the mouflon, Cyprus's national animal";
+}
+
+.cy-5c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/cy/Cyprus_5cent.jpg');
+}
+.cy-5c:hover::after {
+    content: "5 cent coin featuring the mouflon, Cyprus's national animal";
+}
+
+.cy-10c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/cy/Cyprus_10cent.jpg');
+}
+.cy-10c:hover::after {
+    content: "10 cent coin featuring the Kyrenia ship, ancient Greek merchant vessel";
+}
+
+.cy-20c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/cy/Cyprus_20cent.jpg');
+}
+.cy-20c:hover::after {
+    content: "20 cent coin featuring the Kyrenia ship, ancient Greek merchant vessel";
+}
+
+.cy-50c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/cy/Cyprus_50cent.jpg');
+}
+.cy-50c:hover::after {
+    content: "50 cent coin featuring the Kyrenia ship, ancient Greek merchant vessel";
+}
+
+.cy-1e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/cy/Cyprus_1euro.jpg');
+}
+.cy-1e:hover::after {
+    content: "1 euro coin featuring the Kyrenia ship, ancient Greek merchant vessel";
+}
+
+.cy-2e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/cy/Cyprus_2Euro.jpg');
+}
+.cy-2e:hover::after {
+    content: "2 euro coin featuring the Idol of Pomos";
+}
+
+/* Estonia Coins */
+.ee-1c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/et/Estonia_1cent.jpg');
+}
+.ee-1c:hover::after {
+    content: "1 cent coin featuring the Estonian coat of arms";
+}
+
+.ee-2c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/et/Estonia_2cent.jpg');
+}
+.ee-2c:hover::after {
+    content: "2 cent coin with the Estonian coat of arms";
+}
+
+.ee-5c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/et/Estonia_5cent.jpg');
+}
+.ee-5c:hover::after {
+    content: "5 cent coin featuring the Estonian coat of arms";
+}
+
+.ee-10c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/et/Estonia_10cent.jpg');
+}
+.ee-10c:hover::after {
+    content: "10 cent coin featuring the Estonian coat of arms";
+}
+
+.ee-20c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/et/Estonia_20cent.jpg');
+}
+.ee-20c:hover::after {
+    content: "20 cent coin featuring the Estonian coat of arms";
+}
+
+.ee-50c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/et/Estonia_50cent.jpg');
+}
+.ee-50c:hover::after {
+    content: "50 cent coin featuring the Estonian coat of arms";
+}
+
+.ee-1e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/et/Estonia_1Euro.jpg');
+}
+.ee-1e:hover::after {
+    content: "1 euro coin featuring the Estonian coat of arms";
+}
+
+.ee-2e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/et/Estonia_2Euro.jpg');
+}
+.ee-2e:hover::after {
+    content: "2 euro coin featuring Estonia's geographical outline";
+}
+
+/* Ireland Coins */
+.ie-1c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/ie/Ireland_1cent.jpg');
+}
+.ie-1c:hover::after {
+    content: "1 cent coin featuring the Celtic harp";
+}
+
+.ie-2c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/ie/Ireland_2cent.jpg');
+}
+.ie-2c:hover::after {
+    content: "2 cent coin with the Celtic harp";
+}
+
+.ie-5c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/ie/Ireland_5cent.jpg');
+}
+.ie-5c:hover::after {
+    content: "5 cent coin featuring the Celtic harp";
+}
+
+.ie-10c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/ie/Ireland_10cent.jpg');
+}
+.ie-10c:hover::after {
+    content: "10 cent coin featuring the Celtic harp";
+}
+
+.ie-20c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/ie/Ireland_20cent.jpg');
+}
+.ie-20c:hover::after {
+    content: "20 cent coin featuring the Celtic harp";
+}
+
+.ie-50c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/ie/Ireland_50cent.jpg');
+}
+.ie-50c:hover::after {
+    content: "50 cent coin featuring the Celtic harp";
+}
+
+.ie-1e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/ie/Ireland_1euro.jpg');
+}
+.ie-1e:hover::after {
+    content: "1 euro coin featuring the Celtic harp";
+}
+
+.ie-2e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/ie/Ireland_2euro.jpg');
+}
+.ie-2e:hover::after {
+    content: "2 euro coin featuring the Celtic harp";
+}
+
+/* Latvia Coins */
+.lv-1c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/lv/Latvia_1cent.jpg');
+}
+.lv-1c:hover::after {
+    content: "1 cent coin featuring the Latvian national emblem";
+}
+
+.lv-2c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/lv/Latvia_2cent.jpg');
+}
+.lv-2c:hover::after {
+    content: "2 cent coin with the Latvian national emblem";
+}
+
+.lv-5c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/lv/Latvia_5cent.jpg');
+}
+.lv-5c:hover::after {
+    content: "5 cent coin featuring the Latvian national emblem";
+}
+
+.lv-10c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/lv/Latvia_10cent.jpg');
+}
+.lv-10c:hover::after {
+    content: "10 cent coin featuring the Latvian maiden, symbol of freedom";
+}
+
+.lv-20c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/lv/Latvia_20cent.jpg');
+}
+.lv-20c:hover::after {
+    content: "20 cent coin featuring the Latvian maiden, symbol of freedom";
+}
+
+.lv-50c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/lv/Latvia_50cent.jpg');
+}
+.lv-50c:hover::after {
+    content: "50 cent coin featuring the Latvian maiden, symbol of freedom";
+}
+
+.lv-1e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/lv/Latvia_1euro.jpg');
+}
+.lv-1e:hover::after {
+    content: "1 euro coin featuring the Latvian coat of arms";
+}
+
+.lv-2e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/lv/Latvia_2euro.jpg');
+}
+.lv-2e:hover::after {
+    content: "2 euro coin featuring the Vytis (Knight)";
+}
+
+/* Lithuania Coins */
+.lt-1c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/lt/Lithuania_1cent_2015.jpg');
+}
+.lt-1c:hover::after {
+    content: "1 cent coin featuring the Lithuanian coat of arms";
+}
+
+.lt-2c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/lt/Lithuania_2cent_2015.jpg');
+}
+.lt-2c:hover::after {
+    content: "2 cent coin with the Lithuanian coat of arms";
+}
+
+.lt-5c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/lt/Lithuania_5cent_2015.jpg');
+}
+.lt-5c:hover::after {
+    content: "5 cent coin featuring the Lithuanian coat of arms";
+}
+
+.lt-10c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/lt/Lithuania_10cent_2015.jpg');
+}
+.lt-10c:hover::after {
+    content: "10 cent coin featuring the Lithuanian coat of arms";
+}
+
+.lt-20c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/lt/Lithuania_20cent_2015.jpg');
+}
+.lt-20c:hover::after {
+    content: "20 cent coin featuring the Lithuanian coat of arms";
+}
+
+.lt-50c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/lt/Lithuania_50cent_2014.jpg');
+}
+.lt-50c:hover::after {
+    content: "50 cent coin featuring the Lithuanian coat of arms";
+}
+
+.lt-1e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/lt/Lithuania_1euro.jpg');
+}
+.lt-1e:hover::after {
+    content: "1 euro coin featuring the Lithuanian coat of arms";
+}
+
+.lt-2e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/lt/Lithuania_2euro_2015.jpg');
+}
+.lt-2e:hover::after {
+    content: "2 euro coin featuring the Vytis (Knight)";
+}
+
+/* Luxembourg Coins */
+.lu-1c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/lu/Luxembourg_1cent.jpg');
+}
+.lu-1c:hover::after {
+    content: "1 cent coin featuring Grand Duke Henri of Luxembourg";
+}
+
+.lu-2c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/lu/Luxembourg_2cent.jpg');
+}
+.lu-2c:hover::after {
+    content: "2 cent coin with Grand Duke Henri of Luxembourg";
+}
+
+.lu-5c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/lu/Luxembourg_5cent.jpg');
+}
+.lu-5c:hover::after {
+    content: "5 cent coin featuring Grand Duke Henri of Luxembourg";
+}
+
+.lu-10c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/lu/Luxembourg_10cent.jpg');
+}
+.lu-10c:hover::after {
+    content: "10 cent coin featuring Grand Duke Henri of Luxembourg";
+}
+
+.lu-20c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/lu/Luxembourg_20cent.jpg');
+}
+.lu-20c:hover::after {
+    content: "20 cent coin featuring Grand Duke Henri of Luxembourg";
+}
+
+.lu-50c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/lu/Luxembourg_50cent.jpg');
+}
+.lu-50c:hover::after {
+    content: "50 cent coin featuring Grand Duke Henri of Luxembourg";
+}
+
+.lu-1e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/lu/Luxembourg_1Euro.jpg');
+}
+.lu-1e:hover::after {
+    content: "1 euro coin featuring Grand Duke Henri of Luxembourg";
+}
+
+.lu-2e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/lu/Luxembourg_2euro.jpg');
+}
+.lu-2e:hover::after {
+    content: "2 euro coin featuring Grand Duke Henri";
+}
+
+/* Malta Coins */
+.mt-1c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/mt/Malta_1cent.jpg');
+}
+.mt-1c:hover::after {
+    content: "1 cent coin featuring the Maltese cross";
+}
+
+.mt-2c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/mt/Malta_2cent.jpg');
+}
+.mt-2c:hover::after {
+    content: "2 cent coin with the Maltese cross";
+}
+
+.mt-5c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/mt/Malta_5cent.jpg');
+}
+.mt-5c:hover::after {
+    content: "5 cent coin featuring the Maltese cross";
+}
+
+.mt-10c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/mt/Malta_10cent.jpg');
+}
+.mt-10c:hover::after {
+    content: "10 cent coin featuring the Maltese cross";
+}
+
+.mt-20c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/mt/Malta_20cent.jpg');
+}
+.mt-20c:hover::after {
+    content: "20 cent coin featuring the Maltese cross";
+}
+
+.mt-50c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/mt/Malta_50cent.jpg');
+}
+.mt-50c:hover::after {
+    content: "50 cent coin featuring the Maltese cross";
+}
+
+.mt-1e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/mt/Malta_1Euro.jpg');
+}
+.mt-1e:hover::after {
+    content: "1 euro coin featuring the Maltese cross";
+}
+
+.mt-2e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/mt/Malta_2euro.jpg');
+}
+.mt-2e:hover::after {
+    content: "2 euro coin featuring the Maltese cross";
+}
+
+/* Portugal Coins */
+.pt-1c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/pt/Portugal_1cent.jpg');
+}
+.pt-1c:hover::after {
+    content: "1 cent coin featuring the Portuguese coat of arms";
+}
+
+.pt-2c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/pt/Portugal_2cent.jpg');
+}
+.pt-2c:hover::after {
+    content: "2 cent coin with the Portuguese coat of arms";
+}
+
+.pt-5c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/pt/Portugal_5cent.jpg');
+}
+.pt-5c:hover::after {
+    content: "5 cent coin featuring the Portuguese coat of arms";
+}
+
+.pt-10c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/pt/Portugal_10cent.jpg');
+}
+.pt-10c:hover::after {
+    content: "10 cent coin featuring the Portuguese coat of arms";
+}
+
+.pt-20c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/pt/Portugal_20cent.jpg');
+}
+.pt-20c:hover::after {
+    content: "20 cent coin featuring the Portuguese coat of arms";
+}
+
+.pt-50c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/pt/Portugal_50cent.jpg');
+}
+.pt-50c:hover::after {
+    content: "50 cent coin featuring the Portuguese coat of arms";
+}
+
+.pt-1e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/pt/Portugal_1Euro.jpg');
+}
+.pt-1e:hover::after {
+    content: "1 euro coin featuring the Portuguese coat of arms";
+}
+
+.pt-2e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/pt/Portugal_2euro.jpg');
+}
+.pt-2e:hover::after {
+    content: "2 euro coin featuring the Portuguese coat of arms";
+}
+
+/* Slovakia Coins */
+.sk-1c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/sk/Slovakia_1cent.jpg');
+}
+.sk-1c:hover::after {
+    content: "1 cent coin featuring the Slovak coat of arms";
+}
+
+.sk-2c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/sk/Slovakia_2cent.jpg');
+}
+.sk-2c:hover::after {
+    content: "2 cent coin with the Slovak coat of arms";
+}
+
+.sk-5c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/sk/Slovakia_5cent.jpg');
+}
+.sk-5c:hover::after {
+    content: "5 cent coin featuring the Slovak coat of arms";
+}
+
+.sk-10c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/sk/Slovakia_10cent.jpg');
+}
+.sk-10c:hover::after {
+    content: "10 cent coin featuring the Slovak coat of arms";
+}
+
+.sk-20c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/sk/Slovakia_20cent.jpg');
+}
+.sk-20c:hover::after {
+    content: "20 cent coin featuring the Slovak coat of arms";
+}
+
+.sk-50c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/sk/Slovakia_50cent.jpg');
+}
+.sk-50c:hover::after {
+    content: "50 cent coin featuring the Slovak coat of arms";
+}
+
+.sk-1e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/sk/Slovakia_1Euro.jpg');
+}
+.sk-1e:hover::after {
+    content: "1 euro coin featuring the Slovak coat of arms";
+}
+
+.sk-2e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/sk/Slovakia_2Euro.jpg');
+}
+.sk-2e:hover::after {
+    content: "2 euro coin featuring the Slovak coat of arms";
+}
+
+/* Slovenia Coins */
+.si-1c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/sl/Slovenia_1cent.jpg');
+}
+.si-1c:hover::after {
+    content: "1 cent coin featuring Primož Trubar";
+}
+
+.si-2c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/sl/Slovenia_2cent.jpg');
+}
+.si-2c:hover::after {
+    content: "2 cent coin with Primož Trubar";
+}
+
+.si-5c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/sl/Slovenia_5cent.jpg');
+}
+.si-5c:hover::after {
+    content: "5 cent coin featuring Primož Trubar";
+}
+
+.si-10c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/sl/Slovenia_10cent.jpg');
+}
+.si-10c:hover::after {
+    content: "10 cent coin featuring Primož Trubar";
+}
+
+.si-20c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/sl/Slovenia_20cent.jpg');
+}
+.si-20c:hover::after {
+    content: "20 cent coin featuring Primož Trubar";
+}
+
+.si-50c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/sl/Slovenia_50cent.jpg');
+}
+.si-50c:hover::after {
+    content: "50 cent coin featuring Primož Trubar";
+}
+
+.si-1e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/sl/Slovenia_1Euro.jpg');
+}
+.si-1e:hover::after {
+    content: "1 euro coin featuring Primož Trubar";
+}
+
+.si-2e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/sl/Slovenia_2Euro.jpg');
+}
+.si-2e:hover::after {
+    content: "2 euro coin featuring France Prešeren";
+}
+
+/* Vatican City Coins */
+.va-1c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/va/Vatican_1cent_2017.jpg');
+}
+.va-1c:hover::after {
+    content: "1 cent coin featuring Pope Francis";
+}
+
+.va-2c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/va/Vatican_2cent_2017.jpg');
+}
+.va-2c:hover::after {
+    content: "2 cent coin with Pope Francis";
+}
+
+.va-5c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/va/Vatican_5cent_2017.jpg');
+}
+.va-5c:hover::after {
+    content: "5 cent coin featuring Pope Francis";
+}
+
+.va-10c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/va/Vatican_10cent_2017.jpg');
+}
+.va-10c:hover::after {
+    content: "10 cent coin featuring Pope Francis";
+}
+
+.va-20c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/va/Vatican_20cent_2017.jpg');
+}
+.va-20c:hover::after {
+    content: "20 cent coin featuring Pope Francis";
+}
+
+.va-50c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/va/Vatican_50cent_2017.jpg');
+}
+.va-50c:hover::after {
+    content: "50 cent coin featuring Pope Francis";
+}
+
+.va-1e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/va/Vatican_1euro_2017.jpg');
+}
+.va-1e:hover::after {
+    content: "1 euro coin featuring Pope Francis";
+}
+
+.va-2e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/va/Vatican_2euro_2017.jpg');
+}
+.va-2e:hover::after {
+    content: "2 euro coin featuring Prince Albert II";
+}
+
+/* San Marino Coins */
+.sm-1c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/sm/SanMarino_1cent_2017.jpg');
+}
+.sm-1c:hover::after {
+    content: "1 cent coin featuring the Three Towers of San Marino";
+}
+
+.sm-2c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/sm/SanMarino_2cent_2017.jpg');
+}
+.sm-2c:hover::after {
+    content: "2 cent coin with the Three Towers of San Marino";
+}
+
+.sm-5c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/sm/SanMarino_5cent_2017.jpg');
+}
+.sm-5c:hover::after {
+    content: "5 cent coin featuring the Three Towers of San Marino";
+}
+
+.sm-10c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/sm/SanMarino_10cent_2017.jpg');
+}
+.sm-10c:hover::after {
+    content: "10 cent coin featuring the Three Towers of San Marino";
+}
+
+.sm-20c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/sm/SanMarino_20cent_2017.jpg');
+}
+.sm-20c:hover::after {
+    content: "20 cent coin featuring the Three Towers of San Marino";
+}
+
+.sm-50c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/sm/SanMarino_50cent_2017.jpg');
+}
+.sm-50c:hover::after {
+    content: "50 cent coin featuring the Three Towers of San Marino";
+}
+
+.sm-1e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/sm/SanMarino_1euro_2017.jpg');
+}
+.sm-1e:hover::after {
+    content: "1 euro coin featuring the Three Towers of San Marino";
+}
+
+.sm-2e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/sm/SanMarino_2euro_2017.jpg');
+}
+.sm-2e:hover::after {
+    content: "2 euro coin featuring Saint Marino";
+}
+
+/* Monaco Coins */
+.mc-1c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/mo/Monaco_1cent_2006.jpg');
+}
+.mc-1c:hover::after {
+    content: "1 cent coin featuring Prince Albert II of Monaco";
+}
+
+.mc-2c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/mo/Monaco_2cent_2006.jpg');
+}
+.mc-2c:hover::after {
+    content: "2 cent coin with Prince Albert II of Monaco";
+}
+
+.mc-5c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/mo/Monaco_5cent_2006.jpg');
+}
+.mc-5c:hover::after {
+    content: "5 cent coin featuring Prince Albert II of Monaco";
+}
+
+.mc-10c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/mo/Monaco_10cent_2006.jpg');
+}
+.mc-10c:hover::after {
+    content: "10 cent coin featuring Prince Albert II of Monaco";
+}
+
+.mc-20c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/mo/Monaco_20cent.jpg');
+}
+.mc-20c:hover::after {
+    content: "20 cent coin featuring Prince Albert II of Monaco";
+}
+
+.mc-50c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/mo/Monaco_50cent.jpg');
+}
+.mc-50c:hover::after {
+    content: "50 cent coin featuring Prince Albert II of Monaco";
+}
+
+.mc-1e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/mo/Monaco_1euro_2006.jpg');
+}
+.mc-1e:hover::after {
+    content: "1 euro coin featuring Prince Albert II of Monaco";
+}
+
+.mc-2e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/mo/Monaco_2euro.jpg');
+}
+.mc-2e:hover::after {
+    content: "2 euro coin featuring Prince Albert II";
+}
+
+/* Andorra Coins */
+.ad-1c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/ad/Andorra_1cent.jpg');
+}
+.ad-1c:hover::after {
+    content: "1 cent coin featuring the Andorran coat of arms";
+}
+
+.ad-2c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/ad/Andorra_2cent.jpg');
+}
+.ad-2c:hover::after {
+    content: "2 cent coin with the Andorran coat of arms";
+}
+
+.ad-5c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/ad/Andorra_5cent.jpg');
+}
+.ad-5c:hover::after {
+    content: "5 cent coin featuring the Andorran coat of arms";
+}
+
+.ad-10c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/ad/Andorra_10cent.jpg');
+}
+.ad-10c:hover::after {
+    content: "10 cent coin featuring the Andorran coat of arms";
+}
+
+.ad-20c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/ad/Andorra_20cent.jpg');
+}
+.ad-20c:hover::after {
+    content: "20 cent coin featuring the Andorran coat of arms";
+}
+
+.ad-50c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/ad/Andorra_50cent.jpg');
+}
+.ad-50c:hover::after {
+    content: "50 cent coin featuring the Andorran coat of arms";
+}
+
+.ad-1e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/ad/Andorra_1euro.jpg');
+}
+.ad-1e:hover::after {
+    content: "1 euro coin featuring the Andorran coat of arms";
+}
+
+.ad-2e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/ad/Andorra_2euro.jpg');
+}
+.ad-2e:hover::after {
+    content: "2 euro coin with the Andorran coat of arms";
+}
+
+/* Germany Coins */
+.de-1c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/de/Germany_1cent.jpg');
+}
+.de-1c:hover::after {
+    content: "1 cent coin featuring the German oak branch";
+}
+
+.de-2c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/de/Germany_2cent.jpg');
+}
+.de-2c:hover::after {
+    content: "2 cent coin with the German oak branch";
+}
+
+.de-5c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/de/Germany_5cent.jpg');
+}
+.de-5c:hover::after {
+    content: "5 cent coin featuring the German oak branch";
+}
+
+.de-10c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/de/Germany_10cent.jpg');
+}
+.de-10c:hover::after {
+    content: "10 cent coin featuring the Brandenburg Gate";
+}
+
+.de-20c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/de/Germany_20cent.jpg');
+}
+.de-20c:hover::after {
+    content: "20 cent coin featuring the Brandenburg Gate";
+}
+
+.de-50c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/de/Germany_50cent.jpg');
+}
+.de-50c:hover::after {
+    content: "50 cent coin featuring the Brandenburg Gate";
+}
+
+.de-1e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/de/Germany_1euro.jpg');
+}
+.de-1e:hover::after {
+    content: "1 euro coin featuring the German eagle";
+}
+
+.de-2e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/de/Germany_2euro.jpg');
+}
+.de-2e:hover::after {
+    content: "2 euro coin featuring the German eagle";
+}
+
+/* Austria Coins */
+.at-1c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/at/Austria_1cent.jpg');
+}
+.at-1c:hover::after {
+    content: "1 cent coin featuring the Austrian gentian flower";
+}
+
+.at-2c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/at/Austria_2cent.jpg');
+}
+.at-2c:hover::after {
+    content: "2 cent coin with the Austrian gentian flower";
+}
+
+.at-5c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/at/Austria_5cent.jpg');
+}
+.at-5c:hover::after {
+    content: "5 cent coin featuring the Austrian gentian flower";
+}
+
+.at-10c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/at/Austria_10cent.jpg');
+}
+.at-10c:hover::after {
+    content: "10 cent coin featuring the Vienna Secession building";
+}
+
+.at-20c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/at/Austria_20cent.jpg');
+}
+.at-20c:hover::after {
+    content: "20 cent coin featuring the Vienna Secession building";
+}
+
+.at-50c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/at/Austria_50cent.jpg');
+}
+.at-50c:hover::after {
+    content: "50 cent coin featuring the Vienna Secession building";
+}
+
+.at-1e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/at/Austria_1Euro.jpg');
+}
+.at-1e:hover::after {
+    content: "1 euro coin featuring Wolfgang Amadeus Mozart";
+}
+
+.at-2e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/at/Austria_2Euro.jpg');
+}
+.at-2e:hover::after {
+    content: "2 euro coin featuring the Austrian eagle";
+}
+
+/* Belgium Coins */
+.be-1c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/be/Belgium_1cent_2014.jpg');
+}
+.be-1c:hover::after {
+    content: "1 cent coin featuring King Philippe of Belgium";
+}
+
+.be-2c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/be/Belgium_2cent_2014.jpg');
+}
+.be-2c:hover::after {
+    content: "2 cent coin with King Philippe of Belgium";
+}
+
+.be-5c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/be/Belgium_5cent_2014.jpg');
+}
+.be-5c:hover::after {
+    content: "5 cent coin featuring King Philippe of Belgium";
+}
+
+.be-10c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/be/Belgium_10cent_2014.jpg');
+}
+.be-10c:hover::after {
+    content: "10 cent coin featuring King Philippe of Belgium";
+}
+
+.be-20c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/be/Belgium_20cent_2014.jpg');
+}
+.be-20c:hover::after {
+    content: "20 cent coin featuring King Philippe of Belgium";
+}
+
+.be-50c::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/be/Belgium_50cent_2014.jpg');
+}
+.be-50c:hover::after {
+    content: "50 cent coin featuring King Philippe of Belgium";
+}
+
+.be-1e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/be/Belgium_1euro_2014.jpg');
+}
+.be-1e:hover::after {
+    content: "1 euro coin featuring King Philippe of Belgium";
+}
+
+.be-2e::before {
+    background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/be/Belgium_2euro_2014ph.jpg');
+}
+.be-2e:hover::after {
+    content: "2 euro coin featuring King Philippe of Belgium";
+} 

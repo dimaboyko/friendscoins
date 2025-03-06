@@ -4,183 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>European Coin Collection</title>
-        <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .album {
-            background-color: #1a237e;
-            color: white;
-            max-width: 1800px;
-            margin: 0 auto;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-        }
-
-        .countries {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 10px;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        @media (max-width: 1800px) {
-            .countries {
-                grid-template-columns: repeat(10, 1fr);
-            }
-        }
-
-        @media (max-width: 1500px) {
-            .countries {
-                grid-template-columns: repeat(8, 1fr);
-            }
-        }
-
-        @media (max-width: 1200px) {
-            .countries {
-                grid-template-columns: repeat(6, 1fr);
-            }
-        }
-
-        @media (max-width: 900px) {
-            .countries {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-
-        @media (max-width: 600px) {
-            .countries {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        @media (max-width: 450px) {
-            .countries {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        .country {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .country-name {
-            margin-bottom: 5px;
-            font-size: 12px;
-            height: 36px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .flag {
-            width: 50px;
-            height: 33px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-        }
-
-        .coins {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .coin {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: #cd7f32;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            position: relative;
-            overflow: visible;
-        }
-
-        .coin img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-        .coin:hover {
-            transform: scale(1.1);
-        }
-
-        .coin:nth-child(4), .coin:nth-child(5), .coin:nth-child(6) {
-            background-color: transparent;
-        }
-
-        .coin:nth-child(7), .coin:nth-child(8) {
-            background: none;
-        }
-
-        .tooltip {
-            display: none;
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.9);
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            z-index: 1000;
-            width: 200px;
-            text-align: left;
-            font-size: 12px;
-            line-height: 1.4;
-            pointer-events: none;
-            left: 60px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .country-code {
-            margin-top: 10px;
-            border: 2px solid white;
-            border-radius: 20px;
-            padding: 3px 8px;
-            font-size: 11px;
-            font-weight: bold;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .collected {
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.5),
-                        0 0 10px #4CAF50,
-                        0 0 15px rgba(76, 175, 80, 0.5);
-            border: 2px solid #4CAF50;
-        }
-
-        /* Remove or comment out the old .collected::after rule */
-        /* .collected::after {
-            content: "✓";
-            position: absolute;
-            color: #1a237e;
-            font-size: 20px;
-            font-weight: bold;
-        } */
-        </style>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="coins.css">
     </head>
     <body>
         <div class="album">
             <div class="countries">
+
                 <!-- Spain -->
                 <div class="country">
                     <div class="country-name">
@@ -189,38 +19,14 @@
                     </div>
                     <img src="https://flagcdn.com/es.svg" alt="Spain Flag" class="flag">
                     <div class="coins">
-                        <div class="coin collected" title="1 cent">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/es/Spain_1cent.jpg" alt="1 cent">
-                            <div class="tooltip">1 cent coin featuring the Spanish coat of arms</div>
-                        </div>
-                        <div class="coin" title="2 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/es/Spain_2cent.jpg" alt="2 cents">
-                            <div class="tooltip">2 cent coin with the Spanish coat of arms</div>
-                        </div>
-                        <div class="coin" title="5 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/es/Spain_5cent.jpg" alt="5 cents">
-                            <div class="tooltip">5 cent coin featuring the Spanish coat of arms</div>
-                        </div>
-                        <div class="coin" title="10 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/es/Spain_10cent.jpg" alt="10 cents">
-                            <div class="tooltip">10 cent coin featuring King Felipe VI of Spain</div>
-                        </div>
-                        <div class="coin collected" title="20 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/es/Spain_20cent.jpg" alt="20 cents">
-                            <div class="tooltip">20 cent coin featuring King Felipe VI of Spain</div>
-                        </div>
-                        <div class="coin" title="50 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/es/Spain_50cent_2014.jpg" alt="50 cents">
-                            <div class="tooltip">50 cent coin featuring King Felipe VI of Spain</div>
-                        </div>
-                        <div class="coin" title="1 euro">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/es/Spain_1Euro_2015.jpg" alt="1 euro">
-                            <div class="tooltip">1 euro coin featuring King Felipe VI of Spain</div>
-                        </div>
-                        <div class="coin" title="2 euros">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/es/Spain_2euro_2015.jpg" alt="2 euros">
-                            <div class="tooltip">2 euro coin featuring King Felipe VI of Spain</div>
-                        </div>
+                        <div class="coin es-1c"></div>
+                        <div class="coin es-2c"></div>
+                        <div class="coin es-5c"></div>
+                        <div class="coin es-10c"></div>
+                        <div class="coin es-20c collected"></div>
+                        <div class="coin es-50c"></div>
+                        <div class="coin es-1e"></div>
+                        <div class="coin es-2e"></div>
                     </div>
                     <div class="country-code">E</div>
                 </div>
@@ -233,38 +39,14 @@
                     </div>
                     <img src="https://flagcdn.com/gr.svg" alt="Greece Flag" class="flag">
                     <div class="coins">
-                        <div class="coin" title="1 cent">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/gr/Greece_1cent.jpg" alt="1 cent">
-                            <div class="tooltip">1 cent coin featuring the Greek trireme</div>
-                        </div>
-                        <div class="coin" title="2 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/gr/Greece_2cent.jpg" alt="2 cents">
-                            <div class="tooltip">2 cent coin with the Greek corvette</div>
-                        </div>
-                        <div class="coin" title="5 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/gr/Greece_5cent.jpg" alt="5 cents">
-                            <div class="tooltip">5 cent coin featuring the Greek tanker</div>
-                        </div>
-                        <div class="coin collected" title="10 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/gr/Greece_10cent.jpg" alt="10 cents">
-                            <div class="tooltip">10 cent coin featuring Eleftherios Venizelos</div>
-                        </div>
-                        <div class="coin" title="20 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/gr/Greece_20cent.jpg" alt="20 cents">
-                            <div class="tooltip">20 cent coin featuring Eleftherios Venizelos</div>
-                        </div>
-                        <div class="coin" title="50 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/gr/Greece_50cent.jpg" alt="50 cents">
-                            <div class="tooltip">50 cent coin featuring Eleftherios Venizelos</div>
-                        </div>
-                        <div class="coin" title="1 euro">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/gr/Greece_1euro.jpg" alt="1 euro">
-                            <div class="tooltip">1 euro coin featuring the owl from ancient Athens</div>
-                        </div>
-                        <div class="coin collected" title="2 euros">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/gr/Greece_2euro.jpg" alt="2 euros">
-                            <div class="tooltip">2 euro coin featuring the Greek mythological scene</div>
-                        </div>
+                        <div class="coin gr-1c"></div>
+                        <div class="coin gr-2c"></div>
+                        <div class="coin gr-5c"></div>
+                        <div class="coin gr-10c collected"></div>
+                        <div class="coin gr-20c"></div>
+                        <div class="coin gr-50c"></div>
+                        <div class="coin gr-1e"></div>
+                        <div class="coin gr-2e collected"></div>
                     </div>
                     <div class="country-code">GR</div>
                 </div>
@@ -276,38 +58,14 @@
                     </div>
                     <img src="https://flagcdn.com/fr.svg" alt="France Flag" class="flag">
                     <div class="coins">
-                        <div class="coin" title="1 cent">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/fr/France_1cent.jpg" alt="1 cent">
-                            <div class="tooltip">1 cent coin featuring Marianne, symbol of French Republic</div>
-                        </div>
-                        <div class="coin" title="2 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/fr/France_2cent.jpg" alt="2 cents">
-                            <div class="tooltip">2 cent coin with Marianne, symbol of French Republic</div>
-                        </div>
-                        <div class="coin" title="5 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/fr/France_5cent.jpg" alt="5 cents">
-                            <div class="tooltip">5 cent coin featuring Marianne, symbol of French Republic</div>
-                        </div>
-                        <div class="coin" title="10 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/fr/France_10cent_2024.jpg" alt="10 cents">
-                            <div class="tooltip">10 cent coin featuring the tree of life, symbolizing growth and continuity</div>
-                        </div>
-                        <div class="coin" title="20 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/fr/France_20cent_2024.jpg" alt="20 cents">
-                            <div class="tooltip">20 cent coin featuring the tree of life, symbolizing growth and continuity</div>
-                        </div>
-                        <div class="coin" title="50 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/fr/France_50cent_2024.jpg" alt="50 cents">
-                            <div class="tooltip">50 cent coin featuring the tree of life, symbolizing growth and continuity</div>
-                        </div>
-                        <div class="coin" title="1 euro">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/fr/France_1euro_2022.jpg" alt="1 euro">
-                            <div class="tooltip">1 euro coin featuring the tree of life, symbolizing growth and continuity</div>
-                        </div>
-                        <div class="coin" title="2 euros">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/fr/France_2euro_2022.jpg" alt="2 euros">
-                            <div class="tooltip">2 euro coin featuring Marianne, symbol of French Republic</div>
-                        </div>
+                        <div class="coin fr-1c"></div>
+                        <div class="coin fr-2c"></div>
+                        <div class="coin fr-5c"></div>
+                        <div class="coin fr-10c"></div>
+                        <div class="coin fr-20c"></div>
+                        <div class="coin fr-50c"></div>
+                        <div class="coin fr-1e"></div>
+                        <div class="coin fr-2e"></div>
                     </div>
                     <div class="country-code">F</div>
                 </div>
@@ -320,38 +78,14 @@
                     </div>
                     <img src="https://flagcdn.com/hr.svg" alt="Croatia Flag" class="flag">
                     <div class="coins">
-                        <div class="coin" title="1 cent">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/hr/Croatia_1cent.jpg" alt="1 cent">
-                            <div class="tooltip">1 cent coin featuring the Croatian checkerboard pattern</div>
-                        </div>
-                        <div class="coin" title="2 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/hr/Croatia_2cent.jpg" alt="2 cents">
-                            <div class="tooltip">2 cent coin with the Croatian checkerboard pattern</div>
-                        </div>
-                        <div class="coin" title="5 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/hr/Croatia_5cent.jpg" alt="5 cents">
-                            <div class="tooltip">5 cent coin featuring the Croatian checkerboard pattern</div>
-                        </div>
-                        <div class="coin" title="10 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/hr/Croatia_10cent.jpg" alt="10 cents">
-                            <div class="tooltip">10 cent coin featuring the Croatian marten (kuna)</div>
-                        </div>
-                        <div class="coin" title="20 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/hr/Croatia_20cent.jpg" alt="20 cents">
-                            <div class="tooltip">20 cent coin featuring the Croatian marten (kuna)</div>
-                        </div>
-                        <div class="coin" title="50 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/hr/Croatia_50cent.jpg" alt="50 cents">
-                            <div class="tooltip">50 cent coin featuring the Croatian marten (kuna)</div>
-                        </div>
-                        <div class="coin" title="1 euro">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/hr/Croatia_1euro.jpg" alt="1 euro">
-                            <div class="tooltip">1 euro coin featuring the Croatian marten (kuna)</div>
-                        </div>
-                        <div class="coin" title="2 euros">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/hr/Croatia_2euro.jpg" alt="2 euros">
-                            <div class="tooltip">2 euro coin featuring the Croatian map</div>
-                        </div>
+                        <div class="coin hr-1c"></div>
+                        <div class="coin hr-2c"></div>
+                        <div class="coin hr-5c"></div>
+                        <div class="coin hr-10c"></div>
+                        <div class="coin hr-20c"></div>
+                        <div class="coin hr-50c"></div>
+                        <div class="coin hr-1e"></div>
+                        <div class="coin hr-2e"></div>
                     </div>
                     <div class="country-code">HR</div>
                 </div>
@@ -364,38 +98,14 @@
                     </div>
                     <img src="https://flagcdn.com/it.svg" alt="Italy Flag" class="flag">
                     <div class="coins">
-                        <div class="coin" title="1 cent">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/it/Italy_1cent.jpg" alt="1 cent">
-                            <div class="tooltip">1 cent coin featuring the Colosseum of Rome</div>
-                        </div>
-                        <div class="coin" title="2 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/it/Italy_2cent.jpg" alt="2 cents">
-                            <div class="tooltip">2 cent coin with the Colosseum of Rome</div>
-                        </div>
-                        <div class="coin" title="5 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/it/Italy_5cent.jpg" alt="5 cents">
-                            <div class="tooltip">5 cent coin featuring the Colosseum of Rome</div>
-                        </div>
-                        <div class="coin" title="10 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/it/Italy_10cent.jpg" alt="10 cents">
-                            <div class="tooltip">10 cent coin featuring the Colosseum in Rome</div>
-                        </div>
-                        <div class="coin" title="20 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/it/Italy_20cent.jpg" alt="20 cents">
-                            <div class="tooltip">20 cent coin featuring the Colosseum in Rome</div>
-                        </div>
-                        <div class="coin" title="50 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/it/Italy_50cent.jpg" alt="50 cents">
-                            <div class="tooltip">50 cent coin featuring the Colosseum in Rome</div>
-                        </div>
-                        <div class="coin" title="1 euro">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/it/Italy_1euro.jpg" alt="1 euro">
-                            <div class="tooltip">1 euro coin featuring Leonardo da Vinci's Vitruvian Man</div>
-                        </div>
-                        <div class="coin" title="2 euros">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/it/Italy_2euro.jpg" alt="2 euros">
-                            <div class="tooltip">2 euro coin featuring Dante Alighieri</div>
-                        </div>
+                        <div class="coin it-1c"></div>
+                        <div class="coin it-2c"></div>
+                        <div class="coin it-5c"></div>
+                        <div class="coin it-10c"></div>
+                        <div class="coin it-20c"></div>
+                        <div class="coin it-50c"></div>
+                        <div class="coin it-1e"></div>
+                        <div class="coin it-2e"></div>
                     </div>
                     <div class="country-code">I</div>
                 </div>
@@ -408,38 +118,14 @@
                     </div>
                     <img src="https://flagcdn.com/cy.svg" alt="Cyprus Flag" class="flag">
                     <div class="coins">
-                        <div class="coin" title="1 cent">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/cy/Cyprus_1cent.jpg" alt="1 cent">
-                            <div class="tooltip">1 cent coin featuring the mouflon, Cyprus's national animal</div>
-                        </div>
-                        <div class="coin" title="2 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/cy/Cyprus_2cent.jpg" alt="2 cents">
-                            <div class="tooltip">2 cent coin with the mouflon, Cyprus's national animal</div>
-                        </div>
-                        <div class="coin" title="5 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/cy/Cyprus_5cent.jpg" alt="5 cents">
-                            <div class="tooltip">5 cent coin featuring the mouflon, Cyprus's national animal</div>
-                        </div>
-                        <div class="coin" title="10 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/cy/Cyprus_10cent.jpg" alt="10 cents">
-                            <div class="tooltip">10 cent coin featuring the Kyrenia ship, ancient Greek merchant vessel</div>
-                        </div>
-                        <div class="coin" title="20 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/cy/Cyprus_20cent.jpg" alt="20 cents">
-                            <div class="tooltip">20 cent coin featuring the Kyrenia ship, ancient Greek merchant vessel</div>
-                        </div>
-                        <div class="coin" title="50 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/cy/Cyprus_50cent.jpg" alt="50 cents">
-                            <div class="tooltip">50 cent coin featuring the Kyrenia ship, ancient Greek merchant vessel</div>
-                        </div>
-                        <div class="coin" title="1 euro">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/cy/Cyprus_1euro.jpg" alt="1 euro">
-                            <div class="tooltip">1 euro coin featuring the Kyrenia ship, ancient Greek merchant vessel</div>
-                        </div>
-                        <div class="coin" title="2 euros">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/cy/Cyprus_2Euro.jpg" alt="2 euros">
-                            <div class="tooltip">2 euro coin featuring the Idol of Pomos</div>
-                        </div>
+                        <div class="coin cy-1c"></div>
+                        <div class="coin cy-2c"></div>
+                        <div class="coin cy-5c"></div>
+                        <div class="coin cy-10c"></div>
+                        <div class="coin cy-20c"></div>
+                        <div class="coin cy-50c"></div>
+                        <div class="coin cy-1e"></div>
+                        <div class="coin cy-2e"></div>
                     </div>
                     <div class="country-code">CY</div>
                 </div>
@@ -452,38 +138,14 @@
                     </div>
                     <img src="https://flagcdn.com/lv.svg" alt="Latvia Flag" class="flag">
                     <div class="coins">
-                        <div class="coin" title="1 cent">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/lv/Latvia_1cent.jpg" alt="1 cent">
-                            <div class="tooltip">1 cent coin featuring the Latvian national emblem</div>
-                        </div>
-                        <div class="coin" title="2 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/lv/Latvia_2cent.jpg" alt="2 cents">
-                            <div class="tooltip">2 cent coin with the Latvian national emblem</div>
-                        </div>
-                        <div class="coin" title="5 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/lv/Latvia_5cent.jpg" alt="5 cents">
-                            <div class="tooltip">5 cent coin featuring the Latvian national emblem</div>
-                        </div>
-                        <div class="coin" title="10 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/lv/Latvia_10cent.jpg" alt="10 cents">
-                            <div class="tooltip">10 cent coin featuring the Latvian maiden, symbol of freedom</div>
-                        </div>
-                        <div class="coin" title="20 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/lv/Latvia_20cent.jpg" alt="20 cents">
-                            <div class="tooltip">20 cent coin featuring the Latvian maiden, symbol of freedom</div>
-                        </div>
-                        <div class="coin" title="50 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/lv/Latvia_50cent.jpg" alt="50 cents">
-                            <div class="tooltip">50 cent coin featuring the Latvian maiden, symbol of freedom</div>
-                        </div>
-                        <div class="coin" title="1 euro">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/lv/Latvia_1euro.jpg" alt="1 euro">
-                            <div class="tooltip">1 euro coin featuring the Latvian coat of arms</div>
-                        </div>
-                        <div class="coin" title="2 euros">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/lv/Latvia_2euro.jpg" alt="2 euros">
-                            <div class="tooltip">2 euro coin featuring the Vytis (Knight)</div>
-                        </div>
+                        <div class="coin lv-1c"></div>
+                        <div class="coin lv-2c"></div>
+                        <div class="coin lv-5c"></div>
+                        <div class="coin lv-10c"></div>
+                        <div class="coin lv-20c"></div>
+                        <div class="coin lv-50c"></div>
+                        <div class="coin lv-1e"></div>
+                        <div class="coin lv-2e"></div>
                     </div>
                     <div class="country-code">LV</div>
                 </div>
@@ -496,38 +158,14 @@
                     </div>
                     <img src="https://flagcdn.com/de.svg" alt="Germany Flag" class="flag">
                     <div class="coins">
-                        <div class="coin" title="1 cent">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/de/Germany_1cent.jpg" alt="1 cent">
-                            <div class="tooltip">1 cent coin featuring the German oak branch</div>
-                        </div>
-                        <div class="coin" title="2 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/de/Germany_2cent.jpg" alt="2 cents">
-                            <div class="tooltip">2 cent coin with the German oak branch</div>
-                        </div>
-                        <div class="coin" title="5 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/de/Germany_5cent.jpg" alt="5 cents">
-                            <div class="tooltip">5 cent coin featuring the German oak branch</div>
-                        </div>
-                        <div class="coin" title="10 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/de/Germany_10cent.jpg" alt="10 cents">
-                            <div class="tooltip">10 cent coin featuring the Brandenburg Gate</div>
-                        </div>
-                        <div class="coin" title="20 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/de/Germany_20cent.jpg" alt="20 cents">
-                            <div class="tooltip">20 cent coin featuring the Brandenburg Gate</div>
-                        </div>
-                        <div class="coin" title="50 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/de/Germany_50cent.jpg" alt="50 cents">
-                            <div class="tooltip">50 cent coin featuring the Brandenburg Gate</div>
-                        </div>
-                        <div class="coin" title="1 euro">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/de/Germany_1euro.jpg" alt="1 euro">
-                            <div class="tooltip">1 euro coin featuring the German eagle</div>
-                        </div>
-                        <div class="coin" title="2 euros">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/de/Germany_2euro.jpg" alt="2 euros">
-                            <div class="tooltip">2 euro coin featuring the German eagle</div>
-                        </div>
+                        <div class="coin de-1c"></div>
+                        <div class="coin de-2c"></div>
+                        <div class="coin de-5c"></div>
+                        <div class="coin de-10c"></div>
+                        <div class="coin de-20c"></div>
+                        <div class="coin de-50c"></div>
+                        <div class="coin de-1e"></div>
+                        <div class="coin de-2e"></div>
                     </div>
                     <div class="country-code">D</div>
                 </div>
@@ -540,38 +178,14 @@
                     </div>
                     <img src="https://flagcdn.com/at.svg" alt="Austria Flag" class="flag">
                     <div class="coins">
-                        <div class="coin" title="1 cent">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/at/Austria_1cent.jpg" alt="1 cent">
-                            <div class="tooltip">1 cent coin featuring the Austrian gentian flower</div>
-                        </div>
-                        <div class="coin" title="2 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/at/Austria_2cent.jpg" alt="2 cents">
-                            <div class="tooltip">2 cent coin with the Austrian gentian flower</div>
-                        </div>
-                        <div class="coin" title="5 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/at/Austria_5cent.jpg" alt="5 cents">
-                            <div class="tooltip">5 cent coin featuring the Austrian gentian flower</div>
-                        </div>
-                        <div class="coin" title="10 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/at/Austria_10cent.jpg" alt="10 cents">
-                            <div class="tooltip">10 cent coin featuring the Vienna Secession building</div>
-                        </div>
-                        <div class="coin" title="20 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/at/Austria_20cent.jpg" alt="20 cents">
-                            <div class="tooltip">20 cent coin featuring the Vienna Secession building</div>
-                        </div>
-                        <div class="coin" title="50 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/at/Austria_50cent.jpg" alt="50 cents">
-                            <div class="tooltip">50 cent coin featuring the Vienna Secession building</div>
-                        </div>
-                        <div class="coin" title="1 euro">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/at/Austria_1Euro.jpg" alt="1 euro">
-                            <div class="tooltip">1 euro coin featuring Wolfgang Amadeus Mozart</div>
-                        </div>
-                        <div class="coin" title="2 euros">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/at/Austria_2Euro.jpg" alt="2 euros">
-                            <div class="tooltip">2 euro coin featuring the Austrian eagle</div>
-                        </div>
+                        <div class="coin at-1c"></div>
+                        <div class="coin at-2c"></div>
+                        <div class="coin at-5c"></div>
+                        <div class="coin at-10c"></div>
+                        <div class="coin at-20c"></div>
+                        <div class="coin at-50c"></div>
+                        <div class="coin at-1e"></div>
+                        <div class="coin at-2e"></div>
                     </div>
                     <div class="country-code">A</div>
                 </div>
@@ -584,38 +198,14 @@
                     </div>
                     <img src="https://flagcdn.com/be.svg" alt="Belgium Flag" class="flag">
                     <div class="coins">
-                        <div class="coin" title="1 cent">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/be/Belgium_1cent_2014.jpg" alt="1 cent">
-                            <div class="tooltip">1 cent coin featuring King Philippe of Belgium</div>
-                        </div>
-                        <div class="coin" title="2 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/be/Belgium_2cent_2014.jpg" alt="2 cents">
-                            <div class="tooltip">2 cent coin with King Philippe of Belgium</div>
-                        </div>
-                        <div class="coin" title="5 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/be/Belgium_5cent_2014.jpg" alt="5 cents">
-                            <div class="tooltip">5 cent coin featuring King Philippe of Belgium</div>
-                        </div>
-                        <div class="coin" title="10 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/be/Belgium_10cent_2014.jpg" alt="10 cents">
-                            <div class="tooltip">10 cent coin featuring King Philippe of Belgium</div>
-                        </div>
-                        <div class="coin" title="20 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/be/Belgium_20cent_2014.jpg" alt="20 cents">
-                            <div class="tooltip">20 cent coin featuring King Philippe of Belgium</div>
-                        </div>
-                        <div class="coin" title="50 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/be/Belgium_50cent_2014.jpg" alt="50 cents">
-                            <div class="tooltip">50 cent coin featuring King Philippe of Belgium</div>
-                        </div>
-                        <div class="coin" title="1 euro">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/be/Belgium_1euro_2014.jpg" alt="1 euro">
-                            <div class="tooltip">1 euro coin featuring King Philippe of Belgium</div>
-                        </div>
-                        <div class="coin" title="2 euros">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/be/Belgium_2euro_2014ph.jpg" alt="2 euros">
-                            <div class="tooltip">2 euro coin featuring King Philippe of Belgium</div>
-                        </div>
+                        <div class="coin be-1c"></div>
+                        <div class="coin be-2c"></div>
+                        <div class="coin be-5c"></div>
+                        <div class="coin be-10c"></div>
+                        <div class="coin be-20c"></div>
+                        <div class="coin be-50c"></div>
+                        <div class="coin be-1e"></div>
+                        <div class="coin be-2e"></div>
                     </div>
                     <div class="country-code">B</div>
                 </div>
@@ -628,38 +218,14 @@
                     </div>
                     <img src="https://flagcdn.com/nl.svg" alt="Netherlands Flag" class="flag">
                     <div class="coins">
-                        <div class="coin" title="1 cent">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/nl/Netherlands_1cent_2014.jpg" alt="1 cent">
-                            <div class="tooltip">1 cent coin featuring King Willem-Alexander</div>
-                        </div>
-                        <div class="coin" title="2 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/nl/Netherlands_2cent_2014.jpg" alt="2 cents">
-                            <div class="tooltip">2 cent coin with King Willem-Alexander</div>
-                        </div>
-                        <div class="coin" title="5 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/nl/Netherlands_5cent_2014.jpg" alt="5 cents">
-                            <div class="tooltip">5 cent coin featuring King Willem-Alexander</div>
-                        </div>
-                        <div class="coin" title="10 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/nl/Netherlands_10cent.jpg" alt="10 cents">
-                            <div class="tooltip">10 cent coin featuring King Willem-Alexander</div>
-                        </div>
-                        <div class="coin" title="20 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/nl/Netherlands_20cent.jpg" alt="20 cents">
-                            <div class="tooltip">20 cent coin featuring King Willem-Alexander</div>
-                        </div>
-                        <div class="coin" title="50 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/nl/Netherlands_50cent.jpg" alt="50 cents">
-                            <div class="tooltip">50 cent coin featuring King Willem-Alexander</div>
-                        </div>
-                        <div class="coin" title="1 euro">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/nl/Netherlands_1Euro.jpg" alt="1 euro">
-                            <div class="tooltip">1 euro coin featuring King Willem-Alexander</div>
-                        </div>
-                        <div class="coin" title="2 euros">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/nl/Netherlands_2Euro.jpg" alt="2 euros">
-                            <div class="tooltip">2 euro coin featuring King Willem-Alexander</div>
-                        </div>
+                        <div class="coin nl-1c"></div>
+                        <div class="coin nl-2c"></div>
+                        <div class="coin nl-5c"></div>
+                        <div class="coin nl-10c"></div>
+                        <div class="coin nl-20c"></div>
+                        <div class="coin nl-50c"></div>
+                        <div class="coin nl-1e"></div>
+                        <div class="coin nl-2e"></div>
                     </div>
                     <div class="country-code">NL</div>
                 </div>
@@ -672,38 +238,14 @@
                     </div>
                     <img src="https://flagcdn.com/fi.svg" alt="Finland Flag" class="flag">
                     <div class="coins">
-                        <div class="coin" title="1 cent">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/fi/Finland_1cent.jpg" alt="1 cent">
-                            <div class="tooltip">1 cent coin featuring the Finnish heraldic lion</div>
-                        </div>
-                        <div class="coin" title="2 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/fi/Finland_2cent.jpg" alt="2 cents">
-                            <div class="tooltip">2 cent coin with the Finnish heraldic lion</div>
-                        </div>
-                        <div class="coin" title="5 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/fi/Finland_5cent.jpg" alt="5 cents">
-                            <div class="tooltip">5 cent coin featuring the Finnish heraldic lion</div>
-                        </div>
-                        <div class="coin" title="10 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/fi/Finland_10cent.jpg" alt="10 cents">
-                            <div class="tooltip">10 cent coin featuring the Finnish heraldic lion</div>
-                        </div>
-                        <div class="coin" title="20 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/fi/Finland_20cent.jpg" alt="20 cents">
-                            <div class="tooltip">20 cent coin featuring the Finnish heraldic lion</div>
-                        </div>
-                        <div class="coin" title="50 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/fi/Finland_50cent.jpg" alt="50 cents">
-                            <div class="tooltip">50 cent coin featuring the Finnish heraldic lion</div>
-                        </div>
-                        <div class="coin" title="1 euro">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/fi/Finland_1euro.jpg" alt="1 euro">
-                            <div class="tooltip">1 euro coin featuring two flying swans</div>
-                        </div>
-                        <div class="coin" title="2 euros">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/fi/Finland_2euro.jpg" alt="2 euros">
-                            <div class="tooltip">2 euro coin featuring cloudberry and cloudberry flower</div>
-                        </div>
+                        <div class="coin fi-1c"></div>
+                        <div class="coin fi-2c"></div>
+                        <div class="coin fi-5c"></div>
+                        <div class="coin fi-10c"></div>
+                        <div class="coin fi-20c"></div>
+                        <div class="coin fi-50c"></div>
+                        <div class="coin fi-1e"></div>
+                        <div class="coin fi-2e"></div>
                     </div>
                     <div class="country-code">FIN</div>
                 </div>
@@ -716,84 +258,16 @@
                     </div>
                     <img src="https://flagcdn.com/ee.svg" alt="Estonia Flag" class="flag">
                     <div class="coins">
-                        <div class="coin" title="1 cent">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/et/Estonia_1cent.jpg" alt="1 cent">
-                            <div class="tooltip">1 cent coin featuring the Estonian coat of arms</div>
-                        </div>
-                        <div class="coin" title="2 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/et/Estonia_2cent.jpg" alt="2 cents">
-                            <div class="tooltip">2 cent coin with the Estonian coat of arms</div>
-                        </div>
-                        <div class="coin" title="5 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/et/Estonia_5cent.jpg" alt="5 cents">
-                            <div class="tooltip">5 cent coin featuring the Estonian coat of arms</div>
-                        </div>
-                        <div class="coin" title="10 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/et/Estonia_10cent.jpg" alt="10 cents">
-                            <div class="tooltip">10 cent coin featuring the Estonian coat of arms</div>
-                        </div>
-                        <div class="coin" title="20 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/et/Estonia_20cent.jpg" alt="20 cents">
-                            <div class="tooltip">20 cent coin featuring the Estonian coat of arms</div>
-                        </div>
-                        <div class="coin" title="50 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/et/Estonia_50cent.jpg" alt="50 cents">
-                            <div class="tooltip">50 cent coin featuring the Estonian coat of arms</div>
-                        </div>
-                        <div class="coin" title="1 euro">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/et/Estonia_1Euro.jpg" alt="1 euro">
-                            <div class="tooltip">1 euro coin featuring the Estonian coat of arms</div>
-                        </div>
-                        <div class="coin" title="2 euros">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/et/Estonia_2Euro.jpg" alt="2 euros">
-                            <div class="tooltip">2 euro coin featuring Estonia's geographical outline</div>
-                        </div>
+                        <div class="coin ee-1c"></div>
+                        <div class="coin ee-2c"></div>
+                        <div class="coin ee-5c"></div>
+                        <div class="coin ee-10c"></div>
+                        <div class="coin ee-20c"></div>
+                        <div class="coin ee-50c"></div>
+                        <div class="coin ee-1e"></div>
+                        <div class="coin ee-2e"></div>
                     </div>
-                    <div class="country-code">EST</div>
-                </div>
-
-                <!-- Lithuania -->
-                <div class="country">
-                    <div class="country-name">
-                        <div>Lietuva</div>
-                        <div>Lithuania</div>
-                    </div>
-                    <img src="https://flagcdn.com/lt.svg" alt="Lithuania Flag" class="flag">
-                    <div class="coins">
-                        <div class="coin" title="1 cent">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/lt/Lithuania_1cent_2015.jpg" alt="1 cent">
-                            <div class="tooltip">1 cent coin featuring the Lithuanian coat of arms</div>
-                        </div>
-                        <div class="coin" title="2 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/lt/Lithuania_2cent_2015.jpg" alt="2 cents">
-                            <div class="tooltip">2 cent coin with the Lithuanian coat of arms</div>
-                        </div>
-                        <div class="coin" title="5 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/lt/Lithuania_5cent_2015.jpg" alt="5 cents">
-                            <div class="tooltip">5 cent coin featuring the Lithuanian coat of arms</div>
-                        </div>
-                        <div class="coin" title="10 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/lt/Lithuania_10cent_2015.jpg" alt="10 cents">
-                            <div class="tooltip">10 cent coin featuring the Lithuanian coat of arms</div>
-                        </div>
-                        <div class="coin" title="20 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/lt/Lithuania_20cent_2015.jpg" alt="20 cents">
-                            <div class="tooltip">20 cent coin featuring the Lithuanian coat of arms</div>
-                        </div>
-                        <div class="coin" title="50 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/lt/Lithuania_50cent_2014.jpg" alt="50 cents">
-                            <div class="tooltip">50 cent coin featuring the Lithuanian coat of arms</div>
-                        </div>
-                        <div class="coin" title="1 euro">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/lt/Lithuania_1euro.jpg" alt="1 euro">
-                            <div class="tooltip">1 euro coin featuring the Lithuanian coat of arms</div>
-                        </div>
-                        <div class="coin" title="2 euros">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/lt/Lithuania_2euro_2015.jpg" alt="2 euros">
-                            <div class="tooltip">2 euro coin featuring the Vytis (Knight)</div>
-                        </div>
-                    </div>
-                    <div class="country-code">LT</div>
+                    <div class="country-code">EE</div>
                 </div>
 
                 <!-- Ireland -->
@@ -804,82 +278,53 @@
                     </div>
                     <img src="https://flagcdn.com/ie.svg" alt="Ireland Flag" class="flag">
                     <div class="coins">
-                        <div class="coin" title="1 cent">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/ie/Ireland_1cent.jpg" alt="1 cent">
-                            <div class="tooltip">1 cent coin featuring the Celtic harp</div>
-                        </div>
-                        <div class="coin" title="2 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/ie/Ireland_2cent.jpg" alt="2 cents">
-                            <div class="tooltip">2 cent coin with the Celtic harp</div>
-                        </div>
-                        <div class="coin" title="5 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/ie/Ireland_5cent.jpg" alt="5 cents">
-                            <div class="tooltip">5 cent coin featuring the Celtic harp</div>
-                        </div>
-                        <div class="coin" title="10 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/ie/Ireland_10cent.jpg" alt="10 cents">
-                            <div class="tooltip">10 cent coin featuring the Celtic harp</div>
-                        </div>
-                        <div class="coin" title="20 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/ie/Ireland_20cent.jpg" alt="20 cents">
-                            <div class="tooltip">20 cent coin featuring the Celtic harp</div>
-                        </div>
-                        <div class="coin" title="50 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/ie/Ireland_50cent.jpg" alt="50 cents">
-                            <div class="tooltip">50 cent coin featuring the Celtic harp</div>
-                        </div>
-                        <div class="coin" title="1 euro">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/ie/Ireland_1euro.jpg" alt="1 euro">
-                            <div class="tooltip">1 euro coin featuring the Celtic harp</div>
-                        </div>
-                        <div class="coin" title="2 euros">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/ie/Ireland_2euro.jpg" alt="2 euros">
-                            <div class="tooltip">2 euro coin featuring the Celtic harp</div>
-                        </div>
+                        <div class="coin ie-1c"></div>
+                        <div class="coin ie-2c"></div>
+                        <div class="coin ie-5c"></div>
+                        <div class="coin ie-10c"></div>
+                        <div class="coin ie-20c"></div>
+                        <div class="coin ie-50c"></div>
+                        <div class="coin ie-1e"></div>
+                        <div class="coin ie-2e"></div>
                     </div>
                     <div class="country-code">IRL</div>
+                </div>
+
+                <!-- Lithuania -->
+                <div class="country">
+                    <div class="country-name">
+                        <div>Lietuva</div>
+                        <div>Lithuania</div>
+                    </div>
+                    <img src="https://flagcdn.com/lt.svg" alt="Lithuania Flag" class="flag">
+                    <div class="coins">
+                        <div class="coin lt-1c"></div>
+                        <div class="coin lt-2c"></div>
+                        <div class="coin lt-5c"></div>
+                        <div class="coin lt-10c"></div>
+                        <div class="coin lt-20c"></div>
+                        <div class="coin lt-50c"></div>
+                        <div class="coin lt-1e"></div>
+                        <div class="coin lt-2e"></div>
+                    </div>
+                    <div class="country-code">LT</div>
                 </div>
 
                 <!-- Luxembourg -->
                 <div class="country">
                     <div class="country-name">
-                        <div>Lëtzebuerg</div>
                         <div>Luxembourg</div>
                     </div>
                     <img src="https://flagcdn.com/lu.svg" alt="Luxembourg Flag" class="flag">
                     <div class="coins">
-                        <div class="coin" title="1 cent">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/lu/Luxembourg_1cent.jpg" alt="1 cent">
-                            <div class="tooltip">1 cent coin featuring Grand Duke Henri of Luxembourg</div>
-                        </div>
-                        <div class="coin" title="2 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/lu/Luxembourg_2cent.jpg" alt="2 cents">
-                            <div class="tooltip">2 cent coin with Grand Duke Henri of Luxembourg</div>
-                        </div>
-                        <div class="coin" title="5 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/lu/Luxembourg_5cent.jpg" alt="5 cents">
-                            <div class="tooltip">5 cent coin featuring Grand Duke Henri of Luxembourg</div>
-                        </div>
-                        <div class="coin" title="10 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/lu/Luxembourg_10cent.jpg" alt="10 cents">
-                            <div class="tooltip">10 cent coin featuring Grand Duke Henri of Luxembourg</div>
-                        </div>
-                        <div class="coin" title="20 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/lu/Luxembourg_20cent.jpg" alt="20 cents">
-                            <div class="tooltip">20 cent coin featuring Grand Duke Henri of Luxembourg</div>
-                        </div>
-                        <div class="coin" title="50 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/lu/Luxembourg_50cent.jpg" alt="50 cents">
-                            <div class="tooltip">50 cent coin featuring Grand Duke Henri of Luxembourg</div>
-                        </div>
-                        <div class="coin" title="1 euro">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/lu/Luxembourg_1Euro.jpg" alt="1 euro">
-                            <div class="tooltip">1 euro coin featuring Grand Duke Henri of Luxembourg</div>
-                        </div>
-                        <div class="coin" title="2 euros">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/lu/Luxembourg_2euro.jpg" alt="2 euros">
-                            <div class="tooltip">2 euro coin featuring Grand Duke Henri</div>
-                        </div>
+                        <div class="coin lu-1c"></div>
+                        <div class="coin lu-2c"></div>
+                        <div class="coin lu-5c"></div>
+                        <div class="coin lu-10c"></div>
+                        <div class="coin lu-20c"></div>
+                        <div class="coin lu-50c"></div>
+                        <div class="coin lu-1e"></div>
+                        <div class="coin lu-2e"></div>
                     </div>
                     <div class="country-code">L</div>
                 </div>
@@ -891,38 +336,14 @@
                     </div>
                     <img src="https://flagcdn.com/mt.svg" alt="Malta Flag" class="flag">
                     <div class="coins">
-                        <div class="coin" title="1 cent">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/mt/Malta_1cent.jpg" alt="1 cent">
-                            <div class="tooltip">1 cent coin featuring the Maltese cross</div>
-                        </div>
-                        <div class="coin" title="2 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/mt/Malta_2cent.jpg" alt="2 cents">
-                            <div class="tooltip">2 cent coin with the Maltese cross</div>
-                        </div>
-                        <div class="coin" title="5 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/mt/Malta_5cent.jpg" alt="5 cents">
-                            <div class="tooltip">5 cent coin featuring the Maltese cross</div>
-                        </div>
-                        <div class="coin" title="10 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/mt/Malta_10cent.jpg" alt="10 cents">
-                            <div class="tooltip">10 cent coin featuring the Maltese cross</div>
-                        </div>
-                        <div class="coin" title="20 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/mt/Malta_20cent.jpg" alt="20 cents">
-                            <div class="tooltip">20 cent coin featuring the Maltese cross</div>
-                        </div>
-                        <div class="coin" title="50 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/mt/Malta_50cent.jpg" alt="50 cents">
-                            <div class="tooltip">50 cent coin featuring the Maltese cross</div>
-                        </div>
-                        <div class="coin" title="1 euro">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/mt/Malta_1Euro.jpg" alt="1 euro">
-                            <div class="tooltip">1 euro coin featuring the Maltese cross</div>
-                        </div>
-                        <div class="coin" title="2 euros">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/mt/Malta_2euro.jpg" alt="2 euros">
-                            <div class="tooltip">2 euro coin featuring the Maltese cross</div>
-                        </div>
+                        <div class="coin mt-1c"></div>
+                        <div class="coin mt-2c"></div>
+                        <div class="coin mt-5c"></div>
+                        <div class="coin mt-10c"></div>
+                        <div class="coin mt-20c"></div>
+                        <div class="coin mt-50c"></div>
+                        <div class="coin mt-1e"></div>
+                        <div class="coin mt-2e"></div>
                     </div>
                     <div class="country-code">M</div>
                 </div>
@@ -934,38 +355,14 @@
                     </div>
                     <img src="https://flagcdn.com/pt.svg" alt="Portugal Flag" class="flag">
                     <div class="coins">
-                        <div class="coin" title="1 cent">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/pt/Portugal_1cent.jpg" alt="1 cent">
-                            <div class="tooltip">1 cent coin featuring the Portuguese coat of arms</div>
-                        </div>
-                        <div class="coin" title="2 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/pt/Portugal_2cent.jpg" alt="2 cents">
-                            <div class="tooltip">2 cent coin with the Portuguese coat of arms</div>
-                        </div>
-                        <div class="coin" title="5 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/pt/Portugal_5cent.jpg" alt="5 cents">
-                            <div class="tooltip">5 cent coin featuring the Portuguese coat of arms</div>
-                        </div>
-                        <div class="coin" title="10 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/pt/Portugal_10cent.jpg" alt="10 cents">
-                            <div class="tooltip">10 cent coin featuring the Portuguese coat of arms</div>
-                        </div>
-                        <div class="coin" title="20 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/pt/Portugal_20cent.jpg" alt="20 cents">
-                            <div class="tooltip">20 cent coin featuring the Portuguese coat of arms</div>
-                        </div>
-                        <div class="coin" title="50 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/pt/Portugal_50cent.jpg" alt="50 cents">
-                            <div class="tooltip">50 cent coin featuring the Portuguese coat of arms</div>
-                        </div>
-                        <div class="coin" title="1 euro">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/pt/Portugal_1Euro.jpg" alt="1 euro">
-                            <div class="tooltip">1 euro coin featuring the Portuguese coat of arms</div>
-                        </div>
-                        <div class="coin" title="2 euros">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/pt/Portugal_2euro.jpg" alt="2 euros">
-                            <div class="tooltip">2 euro coin featuring the Portuguese coat of arms</div>
-                        </div>
+                        <div class="coin pt-1c"></div>
+                        <div class="coin pt-2c"></div>
+                        <div class="coin pt-5c"></div>
+                        <div class="coin pt-10c"></div>
+                        <div class="coin pt-20c"></div>
+                        <div class="coin pt-50c"></div>
+                        <div class="coin pt-1e"></div>
+                        <div class="coin pt-2e"></div>
                     </div>
                     <div class="country-code">P</div>
                 </div>
@@ -978,38 +375,14 @@
                     </div>
                     <img src="https://flagcdn.com/sk.svg" alt="Slovakia Flag" class="flag">
                     <div class="coins">
-                        <div class="coin" title="1 cent">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/sk/Slovakia_1cent.jpg" alt="1 cent">
-                            <div class="tooltip">1 cent coin featuring the Slovak coat of arms</div>
-                        </div>
-                        <div class="coin" title="2 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/sk/Slovakia_2cent.jpg" alt="2 cents">
-                            <div class="tooltip">2 cent coin with the Slovak coat of arms</div>
-                        </div>
-                        <div class="coin" title="5 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/sk/Slovakia_5cent.jpg" alt="5 cents">
-                            <div class="tooltip">5 cent coin featuring the Slovak coat of arms</div>
-                        </div>
-                        <div class="coin" title="10 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/sk/Slovakia_10cent.jpg" alt="10 cents">
-                            <div class="tooltip">10 cent coin featuring the Slovak coat of arms</div>
-                        </div>
-                        <div class="coin" title="20 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/sk/Slovakia_20cent.jpg" alt="20 cents">
-                            <div class="tooltip">20 cent coin featuring the Slovak coat of arms</div>
-                        </div>
-                        <div class="coin" title="50 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/sk/Slovakia_50cent.jpg" alt="50 cents">
-                            <div class="tooltip">50 cent coin featuring the Slovak coat of arms</div>
-                        </div>
-                        <div class="coin" title="1 euro">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/sk/Slovakia_1Euro.jpg" alt="1 euro">
-                            <div class="tooltip">1 euro coin featuring the Slovak coat of arms</div>
-                        </div>
-                        <div class="coin" title="2 euros">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/sk/Slovakia_2Euro.jpg" alt="2 euros">
-                            <div class="tooltip">2 euro coin featuring the Slovak coat of arms</div>
-                        </div>
+                        <div class="coin sk-1c"></div>
+                        <div class="coin sk-2c"></div>
+                        <div class="coin sk-5c"></div>
+                        <div class="coin sk-10c"></div>
+                        <div class="coin sk-20c"></div>
+                        <div class="coin sk-50c"></div>
+                        <div class="coin sk-1e"></div>
+                        <div class="coin sk-2e"></div>
                     </div>
                     <div class="country-code">SK</div>
                 </div>
@@ -1022,38 +395,14 @@
                     </div>
                     <img src="https://flagcdn.com/si.svg" alt="Slovenia Flag" class="flag">
                     <div class="coins">
-                        <div class="coin" title="1 cent">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/sl/Slovenia_1cent.jpg" alt="1 cent">
-                            <div class="tooltip">1 cent coin featuring Primož Trubar</div>
-                        </div>
-                        <div class="coin" title="2 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/sl/Slovenia_2cent.jpg" alt="2 cents">
-                            <div class="tooltip">2 cent coin with Primož Trubar</div>
-                        </div>
-                        <div class="coin" title="5 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/sl/Slovenia_5cent.jpg" alt="5 cents">
-                            <div class="tooltip">5 cent coin featuring Primož Trubar</div>
-                        </div>
-                        <div class="coin" title="10 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/sl/Slovenia_10cent.jpg" alt="10 cents">
-                            <div class="tooltip">10 cent coin featuring Primož Trubar</div>
-                        </div>
-                        <div class="coin" title="20 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/sl/Slovenia_20cent.jpg" alt="20 cents">
-                            <div class="tooltip">20 cent coin featuring Primož Trubar</div>
-                        </div>
-                        <div class="coin" title="50 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/sl/Slovenia_50cent.jpg" alt="50 cents">
-                            <div class="tooltip">50 cent coin featuring Primož Trubar</div>
-                        </div>
-                        <div class="coin" title="1 euro">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/sl/Slovenia_1Euro.jpg" alt="1 euro">
-                            <div class="tooltip">1 euro coin featuring Primož Trubar</div>
-                        </div>
-                        <div class="coin" title="2 euros">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/sl/Slovenia_2Euro.jpg" alt="2 euros">
-                            <div class="tooltip">2 euro coin featuring France Prešeren</div>
-                        </div>
+                        <div class="coin si-1c"></div>
+                        <div class="coin si-2c"></div>
+                        <div class="coin si-5c"></div>
+                        <div class="coin si-10c"></div>
+                        <div class="coin si-20c"></div>
+                        <div class="coin si-50c"></div>
+                        <div class="coin si-1e"></div>
+                        <div class="coin si-2e"></div>
                     </div>
                     <div class="country-code">SLO</div>
                 </div>
@@ -1066,38 +415,14 @@
                     </div>
                     <img src="https://flagcdn.com/va.svg" alt="Vatican City Flag" class="flag">
                     <div class="coins">
-                        <div class="coin" title="1 cent">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/va/Vatican_1cent_2017.jpg" alt="1 cent">
-                            <div class="tooltip">1 cent coin featuring Pope Francis</div>
-                        </div>
-                        <div class="coin" title="2 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/va/Vatican_2cent_2017.jpg" alt="2 cents">
-                            <div class="tooltip">2 cent coin with Pope Francis</div>
-                        </div>
-                        <div class="coin" title="5 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/va/Vatican_5cent_2017.jpg" alt="5 cents">
-                            <div class="tooltip">5 cent coin featuring Pope Francis</div>
-                        </div>
-                        <div class="coin" title="10 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/va/Vatican_10cent_2017.jpg" alt="10 cents">
-                            <div class="tooltip">10 cent coin featuring Pope Francis</div>
-                        </div>
-                        <div class="coin" title="20 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/va/Vatican_20cent_2017.jpg" alt="20 cents">
-                            <div class="tooltip">20 cent coin featuring Pope Francis</div>
-                        </div>
-                        <div class="coin" title="50 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/va/Vatican_50cent_2017.jpg" alt="50 cents">
-                            <div class="tooltip">50 cent coin featuring Pope Francis</div>
-                        </div>
-                        <div class="coin" title="1 euro">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/va/Vatican_1euro_2017.jpg" alt="1 euro">
-                            <div class="tooltip">1 euro coin featuring Pope Francis</div>
-                        </div>
-                        <div class="coin" title="2 euros">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/va/Vatican_2euro_2017.jpg" alt="2 euros">
-                            <div class="tooltip">2 euro coin featuring Prince Albert II</div>
-                        </div>
+                        <div class="coin va-1c"></div>
+                        <div class="coin va-2c"></div>
+                        <div class="coin va-5c"></div>
+                        <div class="coin va-10c"></div>
+                        <div class="coin va-20c"></div>
+                        <div class="coin va-50c"></div>
+                        <div class="coin va-1e"></div>
+                        <div class="coin va-2e"></div>
                     </div>
                     <div class="country-code">V</div>
                 </div>
@@ -1109,38 +434,14 @@
                     </div>
                     <img src="https://flagcdn.com/sm.svg" alt="San Marino Flag" class="flag">
                     <div class="coins">
-                        <div class="coin" title="1 cent">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/sm/SanMarino_1cent_2017.jpg" alt="1 cent">
-                            <div class="tooltip">1 cent coin featuring the Three Towers of San Marino</div>
-                        </div>
-                        <div class="coin" title="2 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/sm/SanMarino_2cent_2017.jpg" alt="2 cents">
-                            <div class="tooltip">2 cent coin with the Three Towers of San Marino</div>
-                        </div>
-                        <div class="coin" title="5 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/sm/SanMarino_5cent_2017.jpg" alt="5 cents">
-                            <div class="tooltip">5 cent coin featuring the Three Towers of San Marino</div>
-                        </div>
-                        <div class="coin" title="10 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/sm/SanMarino_10cent_2017.jpg" alt="10 cents">
-                            <div class="tooltip">10 cent coin featuring the Three Towers of San Marino</div>
-                        </div>
-                        <div class="coin" title="20 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/sm/SanMarino_20cent_2017.jpg" alt="20 cents">
-                            <div class="tooltip">20 cent coin featuring the Three Towers of San Marino</div>
-                        </div>
-                        <div class="coin" title="50 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/sm/SanMarino_50cent_2017.jpg" alt="50 cents">
-                            <div class="tooltip">50 cent coin featuring the Three Towers of San Marino</div>
-                        </div>
-                        <div class="coin" title="1 euro">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/sm/SanMarino_1euro_2017.jpg" alt="1 euro">
-                            <div class="tooltip">1 euro coin featuring the Three Towers of San Marino</div>
-                        </div>
-                        <div class="coin" title="2 euros">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/sm/SanMarino_2euro_2017.jpg" alt="2 euros">
-                            <div class="tooltip">2 euro coin featuring Saint Marino</div>
-                        </div>
+                        <div class="coin sm-1c"></div>
+                        <div class="coin sm-2c"></div>
+                        <div class="coin sm-5c"></div>
+                        <div class="coin sm-10c"></div>
+                        <div class="coin sm-20c"></div>
+                        <div class="coin sm-50c"></div>
+                        <div class="coin sm-1e"></div>
+                        <div class="coin sm-2e"></div>
                     </div>
                     <div class="country-code">RSM</div>
                 </div>
@@ -1152,38 +453,14 @@
                     </div>
                     <img src="https://flagcdn.com/mc.svg" alt="Monaco Flag" class="flag">
                     <div class="coins">
-                        <div class="coin" title="1 cent">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/mo/Monaco_1cent_2006.jpg" alt="1 cent">
-                            <div class="tooltip">1 cent coin featuring Prince Albert II of Monaco</div>
-                        </div>
-                        <div class="coin" title="2 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/mo/Monaco_2cent_2006.jpg" alt="2 cents">
-                            <div class="tooltip">2 cent coin with Prince Albert II of Monaco</div>
-                        </div>
-                        <div class="coin" title="5 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/mo/Monaco_5cent_2006.jpg" alt="5 cents">
-                            <div class="tooltip">5 cent coin featuring Prince Albert II of Monaco</div>
-                        </div>
-                        <div class="coin" title="10 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/mo/Monaco_10cent_2006.jpg" alt="10 cents">
-                            <div class="tooltip">10 cent coin featuring Prince Albert II of Monaco</div>
-                        </div>
-                        <div class="coin" title="20 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/mo/Monaco_20cent.jpg" alt="20 cents">
-                            <div class="tooltip">20 cent coin featuring Prince Albert II of Monaco</div>
-                        </div>
-                        <div class="coin" title="50 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/mo/Monaco_50cent.jpg" alt="50 cents">
-                            <div class="tooltip">50 cent coin featuring Prince Albert II of Monaco</div>
-                        </div>
-                        <div class="coin" title="1 euro">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/mo/Monaco_1euro_2006.jpg" alt="1 euro">
-                            <div class="tooltip">1 euro coin featuring Prince Albert II of Monaco</div>
-                        </div>
-                        <div class="coin" title="2 euros">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/mo/Monaco_2euro.jpg" alt="2 euros">
-                            <div class="tooltip">2 euro coin featuring Prince Albert II</div>
-                        </div>
+                        <div class="coin mc-1c"></div>
+                        <div class="coin mc-2c"></div>
+                        <div class="coin mc-5c"></div>
+                        <div class="coin mc-10c"></div>
+                        <div class="coin mc-20c"></div>
+                        <div class="coin mc-50c"></div>
+                        <div class="coin mc-1e"></div>
+                        <div class="coin mc-2e"></div>
                     </div>
                     <div class="country-code">MC</div>
                 </div>
@@ -1195,64 +472,95 @@
                     </div>
                     <img src="https://flagcdn.com/ad.svg" alt="Andorra Flag" class="flag">
                     <div class="coins">
-                        <div class="coin" title="1 cent">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/ad/Andorra_1cent.jpg" alt="1 cent">
-                            <div class="tooltip">1 cent coin featuring the Andorran coat of arms</div>
-                        </div>
-                        <div class="coin" title="2 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/ad/Andorra_2cent.jpg" alt="2 cents">
-                            <div class="tooltip">2 cent coin with the Andorran coat of arms</div>
-                        </div>
-                        <div class="coin" title="5 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/ad/Andorra_5cent.jpg" alt="5 cents">
-                            <div class="tooltip">5 cent coin featuring the Andorran coat of arms</div>
-                        </div>
-                        <div class="coin" title="10 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/ad/Andorra_10cent.jpg" alt="10 cents">
-                            <div class="tooltip">10 cent coin featuring the Andorran coat of arms</div>
-                        </div>
-                        <div class="coin" title="20 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/ad/Andorra_20cent.jpg" alt="20 cents">
-                            <div class="tooltip">20 cent coin featuring the Andorran coat of arms</div>
-                        </div>
-                        <div class="coin" title="50 cents">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/ad/Andorra_50cent.jpg" alt="50 cents">
-                            <div class="tooltip">50 cent coin featuring the Andorran coat of arms</div>
-                        </div>
-                        <div class="coin" title="1 euro">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/ad/Andorra_1euro.jpg" alt="1 euro">
-                            
-                            <div class="tooltip">1 euro coin featuring the Andorran coat of arms</div>
-                        </div>
-                        <div class="coin" title="2 euros">
-                            <img src="https://www.ecb.europa.eu/euro/coins/common/shared/img/ad/Andorra_2euro.jpg" alt="2 euros">
-                            <div class="tooltip">2 euro coin with the Andorran coat of arms</div>
-                        </div>
+                        <div class="coin ad-1c"></div>
+                        <div class="coin ad-2c"></div>
+                        <div class="coin ad-5c"></div>
+                        <div class="coin ad-10c"></div>
+                        <div class="coin ad-20c"></div>
+                        <div class="coin ad-50c"></div>
+                        <div class="coin ad-1e"></div>
+                        <div class="coin ad-2e"></div>
                     </div>
                     <div class="country-code">AND</div>
                 </div>
             </div>
         </div>
 
+        <!-- Dialog for enlarged coin view -->
+        <div id="coinDialog" class="dialog">
+            <div class="dialog-content">
+                <span class="close">&times;</span>
+                <div class="dialog-header">
+                    <h2 id="dialogTitle"></h2>
+                </div>
+                <div class="dialog-body">
+                    <img id="dialogImage" src="" alt="Coin Image">
+                    <p id="dialogDescription"></p>
+                </div>
+            </div>
+        </div>
+
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                const coins = document.querySelectorAll('.coin');
+                const dialog = document.getElementById('coinDialog');
+                const closeBtn = dialog.querySelector('.close');
+                const dialogTitle = document.getElementById('dialogTitle');
+                const dialogImage = document.getElementById('dialogImage');
+                const dialogDescription = document.getElementById('dialogDescription');
 
-                coins.forEach(coin => {
+                // Close dialog when clicking the close button
+                closeBtn.addEventListener('click', function() {
+                    dialog.style.display = 'none';
+                });
+
+                // Close dialog when clicking outside
+                window.addEventListener('click', function(e) {
+                    if (e.target === dialog) {
+                        dialog.style.display = 'none';
+                    }
+                });
+
+                // Add click handlers to all coins
+                document.querySelectorAll('.coin').forEach(coin => {
                     coin.addEventListener('click', function(e) {
                         e.preventDefault();
-                        const img = this.querySelector('img');
-                        const title = this.getAttribute('title');
-                        const description = this.querySelector('.tooltip').textContent;
-                        const countryName = this.closest('.country').querySelector('.country-name').textContent.trim();
-
-                        window.parent.postMessage({
-                            type: 'coinClick',
-                            imgSrc: img.src,
-                            title: title,
-                            description: description,
-                            countryName: countryName
-                        }, '*');
+                        e.stopPropagation();
+                        
+                        // Get the coin's class to determine the type
+                        const coinClass = Array.from(this.classList)
+                            .find(cls => cls.match(/^(nl|es|gr|fr|hr|it|fi|cy|ee|ie|lt|lu|mt|pt|sk|si|va|sm|mc|ad|de|at|be)-/));
+                        
+                        if (coinClass) {
+                            try {
+                                // Get the description from the ::after pseudo-element
+                                const description = window.getComputedStyle(this, '::after').content.replace(/"/g, '');
+                                
+                                // Get the image URL from the ::before pseudo-element
+                                const imageUrl = window.getComputedStyle(this, '::before').backgroundImage
+                                    .replace(/url\(['"]?(.*?)['"]?\)/i, '$1');
+                                
+                                // Get the country name
+                                const countryName = this.closest('.country').querySelector('.country-name div:last-child').textContent;
+                                
+                                // Update dialog content
+                                dialogTitle.textContent = `${countryName}`;
+                                dialogImage.src = imageUrl;
+                                dialogDescription.textContent = description;
+                                
+                                // Show dialog
+                                dialog.style.display = 'block';
+                                
+                                // Send the message to the parent window
+                                window.parent.postMessage({
+                                    title: coinClass,
+                                    description: description,
+                                    countryName: countryName,
+                                    imageUrl: imageUrl
+                                }, '*');
+                            } catch (error) {
+                                console.error('Error showing dialog:', error);
+                            }
+                        }
                     });
                 });
             });
