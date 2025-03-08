@@ -1,4 +1,3 @@
-/* Netherlands Coins */
 .coin {
     position: relative;
     width: 50px;
@@ -54,7 +53,7 @@
                 0 0 15px rgba(76, 175, 80, 0.5);
     border: 2px solid #4CAF50;
 }
-
+/* Netherlands Coins */
 /* 1 cent */
 .nl-1c::before {
     background-image: url('https://www.ecb.europa.eu/euro/coins/common/shared/img/nl/Netherlands_1cent_2014.jpg');
